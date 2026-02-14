@@ -13,5 +13,8 @@ echo "The forecasted temperature for noon tomorrow for $city : $fc_temp C"
 # set the time-zone environment variable for Casablanca
 TZ='Morocco/Casablanca'
 
-year=$(date +%Y)
-echo $year
+# Use command substitution to store the current day, month, and year in corresponding shell variables:
+day=$(TZ='Morocco/Casablanca' date -u +%d) 
+month=$(TZ='Morocco/Casablanca' date +%m)
+year=$(TZ='Morocco/Casablanca' date +%Y)
+
